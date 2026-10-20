@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CivicDataLabBot</title>
+<meta name="robots" content="noindex">
+<style>
+  :root { --bg: #ffffff; --fg: #1f2328; --muted: #59636e; --line: #d1d9e0; --code: #f6f8fa; --link: #0969da; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0d1117; --fg: #e6edf3; --muted: #9198a1; --line: #3d444d; --code: #151b23; --link: #4493f8; }
+  }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+         font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 44rem; margin: 0 auto; padding: 2rem 1rem 3rem; }
+  h1 { font-size: 1.6rem; margin: 0 0 .25rem; }
+  h2 { font-size: 1.2rem; margin: 2rem 0 .5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+  h3 { font-size: 1rem; margin: 1.25rem 0 .25rem; }
+  p, li { margin: .4rem 0; }
+  a { color: var(--link); }
+  code, pre { font: 14px/1.5 ui-monospace, Consolas, monospace; background: var(--code); border-radius: 6px; }
+  code { padding: .1rem .3rem; overflow-wrap: anywhere; }
+  pre { padding: .75rem 1rem; overflow-x: auto; }
+  .muted { color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>CivicDataLabBot</h1>
+  <p class="muted">Ultima actualizare / Last updated: 2026-10-20 · <a href="#en">English below</a></p>
+
+  <section lang="ro">
+    <h3>Ce este</h3>
+    <p>CivicDataLabBot este un program care descarcă <strong>date publice</strong>: taxe și impozite locale,
+       tarife pentru apă, căldură, transport și salubrizare, și hotărâri ale consiliilor locale.
+       Le folosim pentru site-uri civice construite numai din date publice sau deschise.</p>
+
+    <h3>Cum se comportă</h3>
+    <ul>
+      <li>Respectă fișierul <code>robots.txt</code> și termenii de utilizare ai site-ului.</li>
+      <li>Face cel mult o cerere pe secundă pe un site. Descărcările mari le face în afara orelor de vârf.</li>
+      <li>Păstrează copii locale și verifică dacă un fișier s-a schimbat înainte să-l descarce din nou.</li>
+      <li>Nu trece de autentificări, CAPTCHA, limite de trafic sau alte bariere.</li>
+      <li>Nu colectează și nu publică date personale.</li>
+    </ul>
+
+    <h3>Cum îl recunoașteți</h3>
+    <p>În jurnalele serverului apare cu acest User-Agent:</p>
+    <pre>CivicDataLabBot/0.1 (+https://gabrieln2805.github.io/bot)</pre>
+
+    <h3>Doriți să încetinim sau să ne oprim?</h3>
+    <p>Scrieți-ne și reducem sau oprim colectarea de pe site-ul dumneavoastră:
+       <a href="https://github.com/gabrieln2805/gabrieln2805.github.io/issues">deschideți un mesaj pe GitHub</a>.</p>
+    <p>Puteți și să ne blocați direct din <code>robots.txt</code>; respectăm regula:</p>
+    <pre>User-agent: CivicDataLabBot
+Disallow: /</pre>
+  </section>
+
+  <section id="en" lang="en">
+    <h2>English</h2>
+
+    <h3>What it is</h3>
+    <p>CivicDataLabBot downloads <strong>public data</strong>: local taxes and fees, tariffs for water,
+       heating, transit and waste collection, and local council decisions. We use it for civic websites
+       built only from public or open data.</p>
+
+    <h3>How it behaves</h3>
+    <ul>
+      <li>Obeys <code>robots.txt</code> and the site's terms of use.</li>
+      <li>Makes at most one request per second per site; bulk downloads run off-peak.</li>
+      <li>Keeps local copies and checks whether a file has changed before downloading it again.</li>
+      <li>Never bypasses logins, CAPTCHAs, rate limits or other barriers.</li>
+      <li>Does not collect or publish personal data.</li>
+    </ul>
+
+    <h3>How to recognise it</h3>
+    <pre>CivicDataLabBot/0.1 (+https://gabrieln2805.github.io/bot)</pre>
+
+    <h3>Want us to slow down or stop?</h3>
+    <p>Tell us and we will reduce or stop collection from your site:
+       <a href="https://github.com/gabrieln2805/gabrieln2805.github.io/issues">open an issue on GitHub</a>.
+       You can also block us in <code>robots.txt</code> with the rule above, and we will follow it.</p>
+  </section>
+</main>
+</body>
+</html>
